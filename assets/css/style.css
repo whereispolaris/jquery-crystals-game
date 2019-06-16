@@ -7,8 +7,9 @@
     margin-bottom: 0;
 }
 
-#chosenNumberDisplay {
-    padding: 10px;
+#chosenNumberDisplay,
+#totalScoreDisplay {
+    padding: 15px;
     height: 150px;
 }
 
@@ -17,13 +18,24 @@
     color: white;
 }
 
-#bigNumber {
+#bigNumber,
+#bigScore {
     text-align: center;
     color: white;
 }
 
+#bigNumber {
+    font-size: 60px;
+}
+
+#bigScore {
+    font-size: 50px;
+    color: black;
+    margin-top: 20px;
+}
+
 div#crystalsDisplay {
-    padding-top: 10px;
+    padding-top: 12px;
     padding-left: 20px;
 } 
 

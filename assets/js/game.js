@@ -23,7 +23,6 @@
 
 // ----------
 
-
 var wins;
 var losses;
 var totalScore;
@@ -31,8 +30,16 @@ var chosenNumber;
 
 function startGame() {
     console.log("game starts");
+
 }
 
+$(document).ready(function(){
+    console.log("Tis ready");
+});
+
+
+
+// BOTTOM
 startGame();
 
 
