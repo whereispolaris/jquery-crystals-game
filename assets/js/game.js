@@ -29,6 +29,8 @@ var losses;
 var totalScore;
 var chosenNumber;
 
+var crystaArray = ["1", ]
+
 // ==== FUNCTIONS ====
 
 function startGame() {
@@ -48,6 +50,16 @@ function randomNumber() {
     return chosenNumber;
 }
 
+// TEMPORARY - Set static data values for each crystal for now
+
+// Crystal click event
+$(".crystal").on("click", function(){
+    console.log("You clicked on a crystal!");
+    var crystalValue = $(this).data("number");
+    console.log(crystalValue);
+});
+
+
 // ==== DOCUMENT READY ====
 $(document).ready(function(){
     console.log("Tis ready");
@@ -63,6 +75,7 @@ $(document).ready(function(){
     startGame();
 
 });
+
 
 
 
