@@ -29,7 +29,7 @@ var losses;
 var totalScore;
 var chosenNumber;
 
-var crystaArray = ["1", ]
+var crystaArray = ["1", "2", "3", "4"];
 
 // ==== FUNCTIONS ====
 
@@ -54,21 +54,34 @@ function randomNumber() {
 
 // Crystal click event
 $(".crystal").on("click", function(){
-    console.log("You clicked on a crystal!");
-    
+    $(".alert").removeClass("show alert-danger alert-success")
+    $(".alert").addClass("hide");
     // Get the data from clicked crystal
     var crystalValue = $(this).data("number");
-    console.log(crystalValue);
 
     // Add value to totalScore
     totalScore += crystalValue;
-    console.log(totalScore);
     $("#bigScore").text(totalScore);
 
-    // check if totalScore is greater than or equal to chosenNumber
+    // check if totalScore is equal to chosenNumber
+    if (totalScore === chosenNumber) {
+        $(".alert").addClass("show alert-success");
+        console.log("you've won!");
         // If equal, add to Wins
-        // If greater, add to losses
-        // else, continue game
+        wins += 1;
+        $(".wins").text(wins);
+        startGame();
+    } 
+    // check if totalScore is greater than chosenNumber
+    if (totalScore > chosenNumber) {
+        $(".alert").addClass("show alert-danger");
+        console.log("you've lost!");
+        losses += 1;
+        $(".losses").text(losses);
+        startGame();
+    }
+    // else, continue game
+    
 });
 
 
@@ -83,15 +96,5 @@ $(document).ready(function(){
     losses = 0;
     // Add losses to page
     $(".losses").text(losses);
-
     startGame();
-
 });
-
-
-
-
-
-
-
-
