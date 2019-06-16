@@ -55,8 +55,20 @@ function randomNumber() {
 // Crystal click event
 $(".crystal").on("click", function(){
     console.log("You clicked on a crystal!");
+    
+    // Get the data from clicked crystal
     var crystalValue = $(this).data("number");
     console.log(crystalValue);
+
+    // Add value to totalScore
+    totalScore += crystalValue;
+    console.log(totalScore);
+    $("#bigScore").text(totalScore);
+
+    // check if totalScore is greater than or equal to chosenNumber
+        // If equal, add to Wins
+        // If greater, add to losses
+        // else, continue game
 });
 
 
