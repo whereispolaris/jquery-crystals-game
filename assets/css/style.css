@@ -1,0 +1,26 @@
+#instructions {
+    padding: 20px;
+    margin-top: 0; 
+}
+
+.jumbotron {
+    margin-bottom: 0;
+}
+
+#chosenNumberDisplay {
+    padding: 10px;
+    height: 150px;
+}
+
+#gameScores{
+    padding: 10px;
+    color: white;
+}
+
+#bigNumber {
+    text-align: center;
+    color: white;
+}
+
+
+

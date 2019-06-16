@@ -7,13 +7,45 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-
+    <link rel="stylesheet" href="assets/css/style.css">
     <title>Crystals Collector!</title>
   </head>
   <body>
-    <div class="container">
-        <h1>Crystals Collector!</h1>
+    <div class="jumbotron jumbotron-fluid bg-success">
+        <div class="container text-sm-center p-t-3">
+            <h1 class="display-4">Crystals Collector</h1>
+            <p class="lead">jQuery Game</p>
+        </div>
     </div>
+    <div class="container">
+        <div class="row">
+            <div id="instructions" class="col-sm">
+                <h3>INSTRUCTIONS</h3>
+                <p>You will be given a random number at the start of the game.</p>
+                <p>There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.</p>
+                <p>You win the game by matching your total score to the random number, you lose the game if your total score goes above the random number.</p>
+                <p>The value of each crystal is hidden from you until you click on it.</p>
+                <p>Each time when the game starts, the game will change the values of each crystal.</p>
+            </div>
+        </div>
+        <div class="row">
+            <div id="chosenNumberDisplay" class="col-2 bg-info">
+                <h4>Numer to Guess:</h4>
+                <h2 id="bigNumber">36</h2>
+            </div>
+            <div id="crystalsDisplay" class="col-6 bg-light justify-content-center">
+                <img class="crystal" src="assets/img/crystal-one.png">
+                <img class="crystal" src="assets/img/crystal-two.png">
+                <img class="crystal" src="assets/img/crystal-three.png">
+                <img class="crystal" src="assets/img/crystal-four.png">
+            </div>
+            <div id="gameScores" class="col-4 bg-secondary">
+                <h4>Wins:</h4>
+                <h4>Losses:</h4>
+            </div>
+        </div>
+    </div>
+
     
 
     <!-- Optional JavaScript -->
