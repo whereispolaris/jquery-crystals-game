@@ -23,10 +23,13 @@
 
 // ----------
 
-var wins = 0;
-var losses = 0;
-var totalScore = 0;
-var chosenNumber = 0;
+//==== GLOBAL VARIABLES ====
+var wins;
+var losses;
+var totalScore;
+var chosenNumber;
+
+// ==== FUNCTIONS ====
 
 function startGame() {
     console.log("game starts");
@@ -40,18 +43,24 @@ function startGame() {
 }
 
 function randomNumber() {
-    chosenNumber = Math.floor((Math.random() * 120) + 19);
+    // BUG: NUMBER IS NOT FROM 19 TO 120 - I THINK I FIXED IT
+    chosenNumber = Math.floor((Math.random() * 101) + 19);
     return chosenNumber;
 }
 
-
+// ==== DOCUMENT READY ====
 $(document).ready(function(){
     console.log("Tis ready");
+    // set wins to 0
     wins = 0;
+    // Add wins to page
+    $(".wins").text(wins);
+    // set losses to 0
     losses = 0;
-    
-    startGame();
+    // Add losses to page
+    $(".losses").text(losses);
 
+    startGame();
 
 });
 
