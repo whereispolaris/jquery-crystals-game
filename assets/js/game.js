@@ -30,13 +30,18 @@ var chosenNumber = 0;
 
 function startGame() {
     console.log("game starts");
-
+    // Resets total score for round
+    totalScore = 0;
+    $("#bigScore").text(totalScore);
+    // Chooses random number for round
+    randomNumber();
+    // Appends random target number
+    $("#bigNumber").text(chosenNumber);
 }
 
 function randomNumber() {
     chosenNumber = Math.floor((Math.random() * 120) + 19);
     return chosenNumber;
-    
 }
 
 
@@ -44,15 +49,15 @@ $(document).ready(function(){
     console.log("Tis ready");
     wins = 0;
     losses = 0;
-    totalScore = 0;
+    
+    startGame();
 
 
 });
 
 
 
-// BOTTOM
-startGame();
+
 
 
 
