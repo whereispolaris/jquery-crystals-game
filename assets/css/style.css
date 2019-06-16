@@ -22,5 +22,22 @@
     color: white;
 }
 
+div#crystalsDisplay {
+    padding-top: 10px;
+    padding-left: 20px;
+} 
 
+.crystal {
+    background: grey;
+    margin: 0 auto;
+    border-radius: 50%;
+}
 
+.crystal:hover {
+    background: black;
+}
+
+img:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+}
