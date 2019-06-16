@@ -23,18 +23,30 @@
 
 // ----------
 
-var wins;
-var losses;
-var totalScore;
-var chosenNumber;
+var wins = 0;
+var losses = 0;
+var totalScore = 0;
+var chosenNumber = 0;
 
 function startGame() {
     console.log("game starts");
 
 }
 
+function randomNumber() {
+    chosenNumber = Math.floor((Math.random() * 120) + 19);
+    return chosenNumber;
+    
+}
+
+
 $(document).ready(function(){
     console.log("Tis ready");
+    wins = 0;
+    losses = 0;
+    totalScore = 0;
+
+
 });
 
 
