@@ -54,7 +54,7 @@ function scoreCheck() {
     // check if totalScore is equal to chosenNumber
     if (totalScore === chosenNumber) {
         $(".alert").addClass("show alert-success");
-        $("#win-loose").text("YOU WON!");
+        $("#win-lose").text("YOU WON!");
         console.log("you've won!");
         // If equal, add to Wins
         wins += 1;
@@ -64,7 +64,7 @@ function scoreCheck() {
     // check if totalScore is greater than chosenNumber
     if (totalScore > chosenNumber) {
         $(".alert").addClass("show alert-danger");
-        $("#win-loose").text("YOU LOST!");
+        $("#win-lose").text("YOU LOST!");
         console.log("you've lost!");
         losses += 1;
         $(".losses").text(losses);
