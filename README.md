@@ -1,5 +1,7 @@
 # jQuery Crystals Game
 
+[Github Pages Link](https://whereispolaris.github.io/jquery-crystals-game/)
+
 Here's how the app works:
 
 - There will be four crystals displayed as buttons on the page.
