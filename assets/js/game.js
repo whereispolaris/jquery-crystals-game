@@ -1,17 +1,17 @@
-//==== GLOBAL VARIABLES ====
-var wins;
-var losses;
-var totalScore;
-var chosenNumber;
-var crystaArray = ["1", "2", "3", "4"];
+//==== GLOBAL letIABLES ====
+let wins;
+let losses;
+let totalScore;
+let chosenNumber;
+let crystaArray = ["1", "2", "3", "4"];
 
 // ==== FUNCTIONS ====
 
 function randomCrystalNumber() {
     // Random number from 1 to 12 for crystals
-    crystalNumber = Math.ceil(Math.random() * 12 );
+    crystalNumber = Math.ceil(Math.random() * 12);
     return crystalNumber;
-} 
+}
 
 function randomNumber() {
     // BUG: NUMBER IS NOT FROM 19 TO 120 - I THINK I FIXED IT
@@ -47,7 +47,7 @@ function scoreCheck() {
         wins += 1;
         $(".wins").text(wins);
         startGame();
-    } 
+    }
     // check if totalScore is greater than chosenNumber
     if (totalScore > chosenNumber) {
         $(".alert").addClass("show alert-danger");
@@ -60,11 +60,11 @@ function scoreCheck() {
 }
 
 // Crystal click event
-$(".crystal").on("click", function(){
+$(".crystal").on("click", function () {
     $(".alert").removeClass("show alert-danger alert-success")
     $(".alert").addClass("hide");
     // Get the data from clicked crystal
-    var crystalValue = $(this).data("number");
+    let crystalValue = $(this).data("number");
 
     // Add value to totalScore
     totalScore += crystalValue;
@@ -74,7 +74,7 @@ $(".crystal").on("click", function(){
 });
 
 // ==== DOCUMENT READY ====
-$(document).ready(function(){
+$(document).ready(function () {
     // set wins to 0
     wins = 0;
     // Add wins to page
