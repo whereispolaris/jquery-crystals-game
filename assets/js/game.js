@@ -29,9 +29,17 @@ var losses;
 var totalScore;
 var chosenNumber;
 
+
 var crystaArray = ["1", "2", "3", "4"];
 
 // ==== FUNCTIONS ====
+
+// Random number from 1 to 12 for crystals
+function randomCrystalNumber() {
+    crystalNumber = Math.ceil(Math.random() * 12 );
+    return crystalNumber
+} 
+
 
 function startGame() {
     console.log("game starts");
@@ -42,13 +50,25 @@ function startGame() {
     randomNumber();
     // Appends random target number
     $("#bigNumber").text(chosenNumber);
+
+    
+    // Add random number to each crystal image as data-number="randomCrystalNumber()" 
+    // TRY TO CODE THIS BETTER - USE LOOP 
+    $("#crystal-one").data("number", randomCrystalNumber());
+    $("#crystal-two").data("number", randomCrystalNumber());
+    $("#crystal-three").data("number", randomCrystalNumber());
+    $("#crystal-four").data("number", randomCrystalNumber());
+
 }
+
+
 
 function randomNumber() {
     // BUG: NUMBER IS NOT FROM 19 TO 120 - I THINK I FIXED IT
     chosenNumber = Math.floor((Math.random() * 101) + 19);
     return chosenNumber;
 }
+
 
 function scoreCheck() {
     // check if totalScore is equal to chosenNumber
