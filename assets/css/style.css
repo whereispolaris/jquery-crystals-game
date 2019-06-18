@@ -34,13 +34,18 @@
     margin-top: 20px;
 }
 
+.wrong-number {
+    color: red
+    
+}
+
 div#crystalsDisplay {
     padding-top: 12px;
     padding-left: 20px;
 } 
 
 .crystal {
-    background: grey;
+    background: #6B757D;
     margin: 0 auto;
     border-radius: 50%;
 }
@@ -53,3 +58,39 @@ img:hover {
     -webkit-transform: scaleX(-1);
     transform: scaleX(-1);
 }
+
+
+/* ==== KEYFRAME ANIMATIONS ==== */
+.wrong-number {
+animation-name: wrong;
+animation-duration: .5s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes wrong {
+from {background-color: black;}
+to {background-color: red;}
+}
+
+/* Standard syntax */
+@keyframes wrong {
+from {background-color: black;}
+to {background-color: red;}
+}
+.correct-number {
+animation-name: correct;
+animation-duration: 1s;
+}
+
+/* Safari 4.0 - 8.0 */
+@-webkit-keyframes correct {
+from {background-color: black;}
+to {background-color: green;}
+}
+
+/* Standard syntax */
+@keyframes correct {
+from {background-color: black;}
+to {background-color: green;}
+}
+

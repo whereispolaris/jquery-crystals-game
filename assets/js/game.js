@@ -20,6 +20,7 @@ function randomNumber() {
 }
 
 function startGame() {
+
     // Resets total score for round
     totalScore = 0;
     $("#bigScore").text(totalScore);
@@ -41,6 +42,7 @@ function scoreCheck() {
     // check if totalScore is equal to chosenNumber
     if (totalScore === chosenNumber) {
         $(".alert").addClass("show alert-success");
+        $("#totalScoreDisplay").addClass("correct-number");
         $("#win-lose").text("YOU WON!");
         console.log("you've won!");
         // If equal, add to Wins
@@ -52,6 +54,7 @@ function scoreCheck() {
     if (totalScore > chosenNumber) {
         $(".alert").addClass("show alert-danger");
         $("#win-lose").text("YOU LOST!");
+        $("#totalScoreDisplay").addClass("wrong-number");
         console.log("you've lost!");
         losses += 1;
         $(".losses").text(losses);
@@ -61,7 +64,8 @@ function scoreCheck() {
 
 // Crystal click event
 $(".crystal").on("click", function () {
-    $(".alert").removeClass("show alert-danger alert-success")
+    $(".alert").removeClass("show alert-danger alert-success");
+    $("#totalScoreDisplay").removeClass("wrong-number correct-number");
     $(".alert").addClass("hide");
     // Get the data from clicked crystal
     let crystalValue = $(this).data("number");
