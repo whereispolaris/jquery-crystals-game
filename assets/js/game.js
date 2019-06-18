@@ -10,8 +10,14 @@ var crystaArray = ["1", "2", "3", "4"];
 function randomCrystalNumber() {
     // Random number from 1 to 12 for crystals
     crystalNumber = Math.ceil(Math.random() * 12 );
-    return crystalNumber
+    return crystalNumber;
 } 
+
+function randomNumber() {
+    // BUG: NUMBER IS NOT FROM 19 TO 120 - I THINK I FIXED IT
+    chosenNumber = Math.floor((Math.random() * 101) + 19);
+    return chosenNumber;
+}
 
 function startGame() {
     // Resets total score for round
@@ -29,12 +35,6 @@ function startGame() {
     $("#crystal-three").data("number", randomCrystalNumber());
     $("#crystal-four").data("number", randomCrystalNumber());
 
-}
-
-function randomNumber() {
-    // BUG: NUMBER IS NOT FROM 19 TO 120 - I THINK I FIXED IT
-    chosenNumber = Math.floor((Math.random() * 101) + 19);
-    return chosenNumber;
 }
 
 function scoreCheck() {
