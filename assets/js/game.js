@@ -48,7 +48,8 @@ function scoreCheck() {
         // If equal, add to Wins
         wins += 1;
         $(".wins").text(wins);
-        startGame();
+        // Setting timeout to display correct numer before new game starts
+        setTimeout(startGame, 1000);
     }
     // check if totalScore is greater than chosenNumber
     if (totalScore > chosenNumber) {
@@ -58,7 +59,8 @@ function scoreCheck() {
         console.log("you've lost!");
         losses += 1;
         $(".losses").text(losses);
-        startGame();
+        // Setting timeout to display wrong numer before new game starts
+        setTimeout(startGame, 1000);
     }
 }
 
